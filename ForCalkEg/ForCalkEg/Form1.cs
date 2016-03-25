@@ -16,5 +16,10 @@ namespace ForCalkEg
         {
             InitializeComponent();
         }
+
+        private void sum_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
