@@ -35,6 +35,7 @@
             this.sum = new System.Windows.Forms.Button();
             this.mul = new System.Windows.Forms.Button();
             this.divis = new System.Windows.Forms.Button();
+            this.entrytwo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // entry
@@ -55,7 +56,7 @@
             // 
             // conclusion
             // 
-            this.conclusion.Location = new System.Drawing.Point(12, 77);
+            this.conclusion.Location = new System.Drawing.Point(12, 90);
             this.conclusion.Name = "conclusion";
             this.conclusion.Size = new System.Drawing.Size(256, 20);
             this.conclusion.TabIndex = 2;
@@ -68,6 +69,7 @@
             this.sub.TabIndex = 3;
             this.sub.Text = "-";
             this.sub.UseVisualStyleBackColor = true;
+            this.sub.Click += new System.EventHandler(this.sub_Click);
             // 
             // sum
             // 
@@ -87,6 +89,7 @@
             this.mul.TabIndex = 5;
             this.mul.Text = "*";
             this.mul.UseVisualStyleBackColor = true;
+            this.mul.Click += new System.EventHandler(this.mul_Click);
             // 
             // divis
             // 
@@ -96,12 +99,21 @@
             this.divis.TabIndex = 6;
             this.divis.Text = ":";
             this.divis.UseVisualStyleBackColor = true;
+            this.divis.Click += new System.EventHandler(this.divis_Click);
+            // 
+            // entrytwo
+            // 
+            this.entrytwo.Location = new System.Drawing.Point(12, 64);
+            this.entrytwo.Name = "entrytwo";
+            this.entrytwo.Size = new System.Drawing.Size(256, 20);
+            this.entrytwo.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.entrytwo);
             this.Controls.Add(this.divis);
             this.Controls.Add(this.mul);
             this.Controls.Add(this.sum);
@@ -125,6 +137,7 @@
         private System.Windows.Forms.Button sum;
         private System.Windows.Forms.Button mul;
         private System.Windows.Forms.Button divis;
+        private System.Windows.Forms.TextBox entrytwo;
     }
 }
 

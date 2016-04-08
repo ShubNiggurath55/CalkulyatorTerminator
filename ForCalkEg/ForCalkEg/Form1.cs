@@ -19,6 +19,38 @@ namespace ForCalkEg
 
         private void sum_Click(object sender, EventArgs e)
         {
+            double first = Convert.ToDouble(entry.Text);
+            double second = Convert.ToDouble(entrytwo.Text);
+            double result = first + second;
+            conclusion.Text = result.ToString();
+
+   
+        }
+
+        private void mul_Click(object sender, EventArgs e)
+        {
+            double first = Convert.ToDouble(entry.Text);
+            double second = Convert.ToDouble(entrytwo.Text);
+            double result = first * second;
+            conclusion.Text = result.ToString();
+
+        }
+
+        private void divis_Click(object sender, EventArgs e)
+        {
+            double first = Convert.ToDouble(entry.Text);
+            double second = Convert.ToDouble(entrytwo.Text);
+            double result = first / second;
+            conclusion.Text = result.ToString();
+
+        }
+
+        private void sub_Click(object sender, EventArgs e)
+        {
+            double first = Convert.ToDouble(entry.Text);
+            double second = Convert.ToDouble(entrytwo.Text);
+            double result = first - second;
+            conclusion.Text = result.ToString();
 
         }
     }
