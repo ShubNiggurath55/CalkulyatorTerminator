@@ -17,41 +17,31 @@ namespace ForCalkEg
             InitializeComponent();
         }
 
-        private void sum_Click(object sender, EventArgs e)
+        private void ButtonsClick(object sender, EventArgs e)
         {
             double first = Convert.ToDouble(entry.Text);
             double second = Convert.ToDouble(entrytwo.Text);
-            double result = first + second;
+            double result;
+
+            switch (((Button) sender).Name)
+            {
+                case "sum":
+                    result = first + second;
+                    break;
+                case "sub":
+                    result = first - second;
+                    break;
+                case "mul":
+                    result = first*second;
+                    break;
+                case "divis":
+                    result = first/second;
+                    break;
+                default:
+                    throw new Exception("Неизвестная операция");
+            }
+
             conclusion.Text = result.ToString();
-
-   
-        }
-
-        private void mul_Click(object sender, EventArgs e)
-        {
-            double first = Convert.ToDouble(entry.Text);
-            double second = Convert.ToDouble(entrytwo.Text);
-            double result = first * second;
-            conclusion.Text = result.ToString();
-
-        }
-
-        private void divis_Click(object sender, EventArgs e)
-        {
-            double first = Convert.ToDouble(entry.Text);
-            double second = Convert.ToDouble(entrytwo.Text);
-            double result = first / second;
-            conclusion.Text = result.ToString();
-
-        }
-
-        private void sub_Click(object sender, EventArgs e)
-        {
-            double first = Convert.ToDouble(entry.Text);
-            double second = Convert.ToDouble(entrytwo.Text);
-            double result = first - second;
-            conclusion.Text = result.ToString();
-
         }
     }
 }

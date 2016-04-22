@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.entry = new System.Windows.Forms.TextBox();
-            this.result = new System.Windows.Forms.Label();
             this.conclusion = new System.Windows.Forms.TextBox();
             this.sub = new System.Windows.Forms.Button();
             this.sum = new System.Windows.Forms.Button();
@@ -44,15 +43,6 @@
             this.entry.Name = "entry";
             this.entry.Size = new System.Drawing.Size(256, 20);
             this.entry.TabIndex = 0;
-            // 
-            // result
-            // 
-            this.result.AutoSize = true;
-            this.result.Location = new System.Drawing.Point(12, 48);
-            this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(13, 13);
-            this.result.TabIndex = 1;
-            this.result.Text = "=";
             // 
             // conclusion
             // 
@@ -69,7 +59,7 @@
             this.sub.TabIndex = 3;
             this.sub.Text = "-";
             this.sub.UseVisualStyleBackColor = true;
-            this.sub.Click += new System.EventHandler(this.sub_Click);
+            this.sub.Click += new System.EventHandler(this.ButtonsClick);
             // 
             // sum
             // 
@@ -79,7 +69,7 @@
             this.sum.TabIndex = 4;
             this.sum.Text = "+";
             this.sum.UseVisualStyleBackColor = true;
-            this.sum.Click += new System.EventHandler(this.sum_Click);
+            this.sum.Click += new System.EventHandler(this.ButtonsClick);
             // 
             // mul
             // 
@@ -89,7 +79,7 @@
             this.mul.TabIndex = 5;
             this.mul.Text = "*";
             this.mul.UseVisualStyleBackColor = true;
-            this.mul.Click += new System.EventHandler(this.mul_Click);
+            this.mul.Click += new System.EventHandler(this.ButtonsClick);
             // 
             // divis
             // 
@@ -99,11 +89,11 @@
             this.divis.TabIndex = 6;
             this.divis.Text = ":";
             this.divis.UseVisualStyleBackColor = true;
-            this.divis.Click += new System.EventHandler(this.divis_Click);
+            this.divis.Click += new System.EventHandler(this.ButtonsClick);
             // 
             // entrytwo
             // 
-            this.entrytwo.Location = new System.Drawing.Point(12, 64);
+            this.entrytwo.Location = new System.Drawing.Point(12, 51);
             this.entrytwo.Name = "entrytwo";
             this.entrytwo.Size = new System.Drawing.Size(256, 20);
             this.entrytwo.TabIndex = 7;
@@ -119,7 +109,6 @@
             this.Controls.Add(this.sum);
             this.Controls.Add(this.sub);
             this.Controls.Add(this.conclusion);
-            this.Controls.Add(this.result);
             this.Controls.Add(this.entry);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -131,7 +120,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox entry;
-        private System.Windows.Forms.Label result;
         private System.Windows.Forms.TextBox conclusion;
         private System.Windows.Forms.Button sub;
         private System.Windows.Forms.Button sum;
