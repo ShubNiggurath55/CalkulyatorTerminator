@@ -21,26 +21,9 @@ namespace ForCalkEg
         {
             double first = Convert.ToDouble(entry.Text);
             double second = Convert.ToDouble(entrytwo.Text);
-            double result;
 
-            switch (((Button) sender).Name)
-            {
-                case "sum":
-                    result = first + second;
-                    break;
-                case "sub":
-                    result = first - second;
-                    break;
-                case "mul":
-                    result = first*second;
-                    break;
-                case "divis":
-                    result = first/second;
-                    break;
-                default:
-                    throw new Exception("Неизвестная операция");
-            }
-
+            ICalculator calculator = CalculatorsFactory.CreateCalculator((((Button)sender).Name));
+            double result = calculator.Calculate(first, second);
             conclusion.Text = result.ToString();
         }
     }
